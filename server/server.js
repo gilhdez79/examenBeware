@@ -19,7 +19,8 @@ app.get("/",function(rq,rs){
     rs.send({mensaje:"Hola mundo", cliente:cliente.Cliente_ID});
 });
 //rutas
-app.use('api/',rutas);
+app.use('/api',rutas);
+
 app.listen(3000, function(){
   console.log("corriendo el server en el puerto 3000");
 });
