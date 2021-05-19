@@ -8,6 +8,6 @@ var router = express.Router();
 router.post('/NutriNet/Cliente', datosClientes.saveCliente);
 router.get('/NutriNet/Cliente/:id', datosClientes.getCliente);
 router.get('/NutriNet/Cliente/', datosClientes.getCliente);
-router.put('/NutriNet/Cliente/:id', datosClientes.actualizaCliente);
+router.put('/NutriNet/Cliente/', datosClientes.actualizaCliente);
 
 module.exports = router;
