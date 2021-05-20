@@ -1,4 +1,4 @@
-export clas Clientes{
+export class Clientes{
     Cliente_ID : number;
     Nombre_Usuario:string;
    Contrasenia:string;
@@ -14,3 +14,5 @@ export clas Clientes{
    Fecha_Creacion:Date;
     Fecha_Actualizacion:Date;
 };
+ 
+  
