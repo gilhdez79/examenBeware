@@ -14,3 +14,5 @@ export class Clientes{
    Fecha_Creacion:Date;
     Fecha_Actualizacion:Date;
 };
+ 
+  

@@ -15,9 +15,6 @@ class Clientes{
   ETA;
   Fecha_Creacion= new Date();
  Fecha_Actualizacion;
-getClientes = () =>{
-
-}
 }
 
 module.exports = Clientes;

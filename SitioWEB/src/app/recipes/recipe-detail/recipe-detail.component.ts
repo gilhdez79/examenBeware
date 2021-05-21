@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ClientesService } from 'src/app/clientessrv/clientes.service';
+import { Clientes } from 'src/app/shared/Clientes.model';
 
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
@@ -12,10 +14,12 @@ import { RecipeService } from '../recipe.service';
 export class RecipeDetailComponent implements OnInit {
   recipe: Recipe;
   id: number;
+  cliente:Clientes;
 
   constructor(private recipeService: RecipeService,
               private route: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private clientesrv: ClientesService) {
   }
 
   ngOnInit() {
@@ -24,8 +28,16 @@ export class RecipeDetailComponent implements OnInit {
         (params: Params) => {
           this.id = +params['id'];
           this.recipe = this.recipeService.getRecipe(this.id);
+
+          this.clientesrv.get_Clientes((this.id+1).toString()).subscribe((s)=>{
+            this.cliente = s;
+             console.log(this.cliente);
+          });
+    
+
         }
       );
+
   }
 
   onAddToShoppingList() {
