@@ -1,19 +1,19 @@
 <p>
-  recipe-edit works!
+ Alta a Clientes!
 </p>
-<form>
+<form [formGroup]="formGroup" novalidate (ngSubmit)="onSubmit(formGroup)" novalidate>
   <div class="form-group">
     <label for="txtNombreUsuario">Nombre Usuario</label>
-    <input type="email" class="form-control" id="txtNombreUsuario" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" class="form-control" id="txtNombreUsuario" formControlName="txtNombreUsuario" aria-describedby="emailHelp"    placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" class="form-control" id="password" placeholder="Password">
+    <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" >
   </div>
   <div class="form-group">
     <label for="txtApellidos">Apellidos</label>
-    <input type="email" class="form-control" id="txtApellidos" aria-describedby="emailHelp" placeholder="Apellidos">
+    <input type="email" class="form-control" id="txtApellidos" formControlName="txtApellidos" aria-describedby="emailHelp" placeholder="Apellidos">
   </div>
   <div class="form-group">
     <label for="txtemail">Correo Correo Electronico</label>
@@ -43,10 +43,6 @@
         <label for="txtEta">Eta</label>
         <input type="text" class="form-control" id="Peso" aria-describedby="emailHelp" placeholder="ETA">
       </div>
-      <div class="form-group">
-        <label for="txtEta">Eta</label>
-        <input type="text" class="form-control" id="Peso" aria-describedby="emailHelp" placeholder="ETA">
-      </div>
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
@@ -54,7 +50,6 @@
     </div>
 
   </div>
-
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

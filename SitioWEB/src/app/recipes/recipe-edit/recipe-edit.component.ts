@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-
+import {   FormControl, FormGroup, NgForm } from '@angular/forms';
+import { Clientes } from 'src/app/shared/Clientes.model';
 @Component({
   selector: 'app-recipe-edit',
   templateUrl: './recipe-edit.component.html',
@@ -9,8 +10,9 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class RecipeEditComponent implements OnInit {
   id: number;
   editMode = false;
-
-  constructor(private route: ActivatedRoute) { }
+  itemCliente:Clientes;
+formGroup:FormGroup;
+  constructor(private route: ActivatedRoute,) { }
 
   ngOnInit() {
     this.route.params
@@ -20,6 +22,16 @@ export class RecipeEditComponent implements OnInit {
           this.editMode = params['id'] != null;
         }
       );
-  }
 
+      this.formGroup = new FormGroup({
+        txtNombreUsuario: new FormControl(''),
+        password: new FormControl(''),
+        txtApellidos: new FormControl('')
+      });
+
+  }
+onSubmit(f: NgForm){
+console.log(f);
+const { password  } = f.value;
+}
 }
