@@ -2,15 +2,13 @@ import { AstMemoryEfficientTransformer } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
 import {Clientes} from "../../../shared/Clientes.model";
 
-import { Recipe } from '../../recipe.model';
-
 @Component({
-  selector: 'app-recipe-item',
-  templateUrl: './recipe-item.component.html',
-  styleUrls: ['./recipe-item.component.css']
+  selector: 'app-clientes-item',
+  templateUrl: './clientes-item.component.html',
+  styleUrls: ['./clientes-item.component.css']
 })
-export class RecipeItemComponent implements OnInit {
-  @Input() recipe?: Recipe;
+export class ClientesItemComponent implements OnInit {
+  @Input() Clientes?: Clientes;
   @Input() index: number;
 clientes:any;
 

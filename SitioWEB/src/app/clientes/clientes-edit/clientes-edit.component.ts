@@ -3,11 +3,11 @@ import { ActivatedRoute, Params } from '@angular/router';
 import {   FormControl, FormGroup, NgForm } from '@angular/forms';
 import { Clientes } from 'src/app/shared/Clientes.model';
 @Component({
-  selector: 'app-recipe-edit',
-  templateUrl: './recipe-edit.component.html',
-  styleUrls: ['./recipe-edit.component.css']
+  selector: 'app-clientes-edit',
+  templateUrl: './clientes-edit.component.html',
+  styleUrls: ['./clientes-edit.component.css']
 })
-export class RecipeEditComponent implements OnInit {
+export class ClientesEditComponent implements OnInit {
   id: number;
   editMode = false;
   itemCliente:Clientes;

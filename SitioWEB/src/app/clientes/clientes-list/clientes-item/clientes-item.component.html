@@ -4,13 +4,13 @@
   routerLinkActive="active"
   class="list-group-item clearfix">
   <div class="pull-left">
-    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-    <p class="list-group-item-text">{{ recipe.description }}</p>
+    <h4 class="list-group-item-heading">{{ clientes.name }}</h4>
+    <p class="list-group-item-text">{{ clientes.description }}</p>
   </div>
   <span class="pull-right">
         <img
-          [src]="recipe.imagePath"
-          alt="{{ recipe.name }}"
+          [src]="clientes.imagePath"
+          alt="{{ clientes.name }}"
           class="img-responsive"
           style="max-height: 50px;">
   </span>
@@ -21,10 +21,10 @@
   [routerLink]="[index]"
   routerLinkActive="active"
   class="list-group-item clearfix">
- 
+
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ clientes.Nombre }}</h4>
     <p class="list-group-item-text">{{ clientes.Apellidos }}</p>
   </div>
-  
+
 </div> -->

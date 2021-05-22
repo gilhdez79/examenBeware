@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { RecipesComponent } from './recipes/recipes.component';
+import { ClientesComponent } from './clientes/clientes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
-import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
-import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { ClientesStartComponent } from './clientes/clientes-start/clientes-start.component';
+import { ClientesDetailComponent } from './clientes/clientes-detail/clientes-detail.component';
+import { ClientesEditComponent } from './clientes/clientes-edit/clientes-edit.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/clientes', pathMatch: 'full' },
-  { path: 'clientes', component: RecipesComponent, children: [
-    { path: '', component: RecipeStartComponent },
-    { path: 'new', component: RecipeEditComponent },
-    { path: ':id', component: RecipeDetailComponent },
-    { path: ':id/edit', component: RecipeEditComponent },
+  { path: 'clientes', component: ClientesComponent, children: [
+    { path: '', component: ClientesStartComponent },
+    { path: 'new', component: ClientesEditComponent },
+    { path: ':id', component: ClientesDetailComponent },
+    { path: ':id/edit', component: ClientesEditComponent },
   ] },
   { path: 'shopping-list', component: ShoppingListComponent },
 ];
